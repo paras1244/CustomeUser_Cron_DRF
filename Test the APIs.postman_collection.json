@@ -1,0 +1,264 @@
+{
+	"info": {
+		"_postman_id": "9bce3d1f-7737-461d-b99f-0e621ecd4af5",
+		"name": "Test the APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18318488"
+	},
+	"item": [
+		{
+			"name": "Hotel",
+			"item": [
+				{
+					"name": "Create User",
+					"item": [
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \n        \"sss\"\n  ,\n    \"password\": \n        \"sss\"\n   ,\n    \"password2\": \n        \"sss\"\n  \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:2323/register",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "2323",
+									"path": [
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"dma\",\n    \"password\": \"dma\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:2323/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "2323",
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Hotel Activity",
+					"item": [
+						{
+							"name": "Get Hotel List",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MTUxNjE4LCJpYXQiOjE2NTUxMjE2MTgsImp0aSI6IjExNWVlOTIzZjRiZDRhMGI4MDUzNjk0Yjg0MWI5YmI4IiwidXNlcl9pZCI6M30.3GU0fd0Fb9ZlLJtN2X3GPLs6ZEa7lXDxOLthC43Spak",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MTM3ODk0LCJpYXQiOjE2NTUxMTk4OTQsImp0aSI6IjU2MzhmMTYxN2QxNjQyMzdiY2EzNGZkZGY2NDMxY2ZhIiwidXNlcl9pZCI6M30.M-yJk26y6Z1i37CdGy2CBdEpVvHiT8qPKIk1JvRetoc",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:2323/hotel",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "2323",
+									"path": [
+										"hotel"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Hotel",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"name\": \"ddsddfgd \",\n        \"address\": \"jakatnaka\",\n        \"votes\": 43\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:2323/hotel",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "2323",
+									"path": [
+										"hotel"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Hotel",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"name\": \"test \",\n        \"address\": \"abcd\",\n        \"votes\": 4\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:2323/hotel/8/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "2323",
+									"path": [
+										"hotel",
+										"8",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete hotel",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Winners hotel",
+					"item": [
+						{
+							"name": "History of Winner Hotel",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:2323/Daily_Winners_history",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "2323",
+									"path": [
+										"Daily_Winners_history"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Voting to hotel",
+					"item": [
+						{
+							"name": "for vote to perticular hotel",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjA4Nzc2LCJpYXQiOjE2NTUxNzg3NzYsImp0aSI6IjE4OGQyN2YxNjFhZTQ0MDQ4YTk1ZTNhMTc2ZTU4NTUxIiwidXNlcl9pZCI6M30.wt2dyadmJbuRWgPnwIvV49fxlDrb6qAxolkVryQIEBo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:2323/vote/3/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "2323",
+									"path": [
+										"vote",
+										"3",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
