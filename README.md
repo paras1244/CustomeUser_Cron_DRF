@@ -1,4 +1,13 @@
+# Logic
 
+I have customize the auth_user and added some fields,
+Please check in "hotel_vote.models file.
+
+
+
+
+
+# setup
 1. First of all create your own environment 
 <<<<<command >>>>
 python3 -m venv venv
